@@ -1,0 +1,32 @@
+{
+  "name": "troyesstockbot",
+  "version": "1.0.0",
+  "description": "Discord bot to help our competitive community (link startgg, discord and twitter)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dotenvx run -f .env.dev.local -- nodemon ./index.js localhost 8000",
+    "start": "node ./index.js",
+    "com-dev": "dotenvx run -f .env.dev.local -- node ./deploy-commands.js",
+    "com": "node ./deploy-commands.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkruba/troyesStockBot.git"
+  },
+  "author": "Glopeur",
+  "contributors": [
+    "SiningNRV"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkruba/troyesStockBot/issues"
+  },
+  "homepage": "https://github.com/tkruba/troyesStockBot#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^0.35.1",
+    "discord.js": "^14.14.1"
+  }
+}
