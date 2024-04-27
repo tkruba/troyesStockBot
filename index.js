@@ -53,7 +53,7 @@ client.on(Events.InteractionCreate, async interaction => {
 
     const modalId = interaction.customId;
     const sender = client.users.cache.get(interaction.user.id);
-    const guild = client.guilds.cache.get(process.env.DISCORD_GUILD_ID);
+    const guild = client.guilds.cache.get(process.env.DISCORD_SERVER_ID);
 
     switch(modalId) {
         case 'announcementModal':
