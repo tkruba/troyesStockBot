@@ -2,6 +2,7 @@ require('@dotenvx/dotenvx').config();
 
 const fs = require('node:fs');
 const path = require('node:path');
+
 const { Client, Collection, EmbedBuilder, Events, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -30,7 +31,7 @@ client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
     const command = interaction.client.commands.get(interaction.commandName);
-    
+  
     if (!command) {
         console.error(`No command matching ${interaction.commandName} was found.`);
         return;
